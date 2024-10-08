@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './FeedbackOptoins.module.css';
 
 export default class FeedbackOptions extends Component {
   static defaultProps = {
@@ -9,14 +10,14 @@ export default class FeedbackOptions extends Component {
   render() {
     const { addGood, addNeutral, addBad } = this.props;
     return (
-      <div>
-        <button type="button" onClick={addGood}>
+      <div className={css.buttonContainer}>
+        <button type="button" onClick={addGood} className={css.feedbackBtn}>
           Good
         </button>
-        <button type="button" onClick={addNeutral}>
+        <button type="button" onClick={addNeutral} className={css.feedbackBtn}>
           Neutral
         </button>
-        <button type="button" onClick={addBad}>
+        <button type="button" onClick={addBad} className={css.feedbackBtn}>
           Bad
         </button>
       </div>
